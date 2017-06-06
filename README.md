@@ -83,6 +83,18 @@ Computing the inverse of a square matrix can be done with the `solve`
 function in R. For example, if `X` is a square invertible matrix, then
 `solve(X)` returns its inverse.
 
+Example: Inverse of 2x2 matrix 
+	x <- matrix(c(1,2,3,4), nrow=2, ncol=2, byrow=T)
+	test <- makeCacheMatrix(x)
+	cacheSolve(test)
+Expected Answer:
+       		[,1]    [,2]
+	[1,] 	-2.0     1.0
+	[2,]  	1.5     -0.5
+
+Another option is to use the diag() function to create an invertable square matrix,
+however this only creates a matrix with 1's & 0's with the diagonal elements = to 1
+
 For this assignment, assume that the matrix supplied is always
 invertible.
 
